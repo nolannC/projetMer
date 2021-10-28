@@ -1,7 +1,7 @@
 # Top 10 des animaux marins les plus dangereux
 ![Des animaux marins](assets/bandeau.jpg) <br>
 > En équipe avec
->> Quentin Seurt et Pierre Le Monnier: Site Bubble, Front-end <br>
+>> Quentin Seurt et Pierre Lemonnier: Site Bubble, Front-end <br>
 >> Dylan Bourdais, Nolann Colliou et Cindy Billerait: Interface pygame Back-end <br>
 <br>
 
