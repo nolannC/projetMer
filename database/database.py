@@ -1,7 +1,6 @@
 # Bibliothèques
 import sqlite3
 import csv
-import os
 
 
 def nomToJpg(nom):
@@ -34,22 +33,6 @@ cur = conn.cursor()
 cur.execute("DROP TABLE IF EXISTS main")
 # création de la table 'main'
 cur.execute("CREATE TABLE main (id INTEGER, nom TEXT, longueur_moy TEXT, longueur_max TEXT, poids_moy TEXT, poids_max TEXT, age_max TEXT, nourriture TEXT, emplacement TEXT, profondeur_min TEXT, profondeur_max TEXT, cause TEXT, reputation TEXT, description TEXT, protection TEXT, image_path TEXT, PRIMARY KEY(id))")
-
-# création d'un tableau qui contient tout les chemins des images
-images_path = []
-
-# on récupère tout les fichiers qui sont dans assets
-for files in os.walk("./assets/"):
-    # convertir files en liste
-    filesList = list(files)
-    # supprimer les deux premiers éléments qui ne nous consernent pas
-    for i in range(2):
-        # supprimer les deux premiers éléments
-        filesList.pop(0)
-    # on récupère les images restantes
-    for filename in filesList[0]:
-        # ajouter les chemins dans images_path
-        images_path.append(filename)
 
 # on ouvre le fichier en mode lecture
 with open("database.csv", "r") as file:
